@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes(['verify' => true]);
 
-Auth::routes();
+Route::get('/', 'FlexController@index')->name('index');
+Route::get('/flex/create', 'FlexController@create')->name('flex.create')->middleware('verified');
+Route::get('/flex/{demo_code}', 'FlexController@show')->name('flex.show');
+Route::post('/flex', 'FlexController@store')->name('flex.store')->middleware('verified');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/webhook/line', 'WebhookController@line');
