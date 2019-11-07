@@ -18,7 +18,7 @@
                     @if (empty($flex->verification))
                         <p>尚未認證的 Flex message ，所以還無法直接 demo 給你看</p>
                     @else
-                        如果你需要 demo，可以 <a href="https://line.me/R/ti/p/%40{{ $flex->bot_id }}">加入好友</a>，並且輸入：
+                        如果你需要 demo，可以 <a href="https://line.me/R/ti/p/%40872ahwhe">加入好友</a>，並且輸入：
                         <code>demo {{ $flex->demo_code }}</code>
                     @endif
                 </div>
