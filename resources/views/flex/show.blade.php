@@ -15,7 +15,7 @@
                 <h2 class="p-3 card-title">{{ $flex->name }}</h2>
                 <div class="pb-3 pl-3 pr-3">
                     <p>{{ $flex->description }}</p>
-                    @if (empty($flex->verification))
+                    @if (empty($flex->verify_at))
                         <p>尚未認證的 Flex message ，所以還無法直接 demo 給你看</p>
                     @else
                         如果你需要 demo，可以 <a href="https://line.me/R/ti/p/%40872ahwhe">加入好友</a>，並且輸入：
@@ -63,7 +63,10 @@
                     <img src="{{ url($flex->demo_image) }}" class="card-img-top" alt="...">
                 </div>
                 <div class="p-3">
-                    這個 Flex message 由 <a href="https://line.me/R/ti/p/%40{{ $flex->bot_id }}">&#64{{$flex->bot_id}}</a> 提供
+                    @if (empty($flex->bot_id))
+                    @else
+                        這個 Flex message 由 <a href="https://line.me/R/ti/p/%40{{ $flex->bot_id }}">&#64{{$flex->bot_id}}</a> 提供
+                    @endif
                 </div>
             </div>
         </div>
