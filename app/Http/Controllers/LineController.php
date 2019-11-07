@@ -56,7 +56,7 @@ class LineController extends Controller
                     case 'text':
                         if (preg_match('/^demo/',$text)){
                             $text = str_replace("demo ", "", $text);
-                            $flex = Flex::where('demo_code', $text)->whereNotNull('verification')->first();
+                            $flex = Flex::where('demo_code', $text)->whereNotNull('verify_at')->first();
                             if (empty($flex)) {
                                 $bot->replyText($replyToken, '我不懂你要我做什麼！');
                             } else {
