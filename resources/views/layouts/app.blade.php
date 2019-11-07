@@ -109,12 +109,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 footer-copyright">
-                            &copy; 2019 by <a href="">Flex Box</a>
-                        </div>
-                        <div class="col-md-6 footer-social">
-                            <a href="https://www.facebook.com/HairSheep-337894686874942/"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            &copy; 2019 by <a href="">Eric</a>
                         </div>
                     </div>
                 </div>

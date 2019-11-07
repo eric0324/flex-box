@@ -29,7 +29,7 @@ class CreateFlexesTable extends Migration
             $table->text('perl')->nullable();
             $table->text('python')->nullable();
             $table->text('nodejs')->nullable();
-            $table->dateTime('verification')->nullable();
+            $table->dateTime('verify_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

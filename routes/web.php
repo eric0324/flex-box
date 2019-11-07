@@ -18,4 +18,4 @@ Route::get('/flex/create', 'FlexController@create')->name('flex.create')->middle
 Route::get('/flex/{demo_code}', 'FlexController@show')->name('flex.show');
 Route::post('/flex', 'FlexController@store')->name('flex.store')->middleware('verified');
 
-Route::get('/webhook/line', 'WebhookController@line');
+Route::post('/line/webhook', 'LineController@webhook');
