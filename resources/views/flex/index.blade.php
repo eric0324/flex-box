@@ -13,7 +13,8 @@
 <div class="container">
     <div class="row">
     @foreach ($flexes as $flex)
-        <div class="col-3">
+        <div class="col-12 col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <div class="pt-1"></div>
             <div class="card">
                 <img src="{{ url($flex->demo_image) }}" class="card-img-top" alt="...">
                 <div class="card-body">

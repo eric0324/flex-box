@@ -11,6 +11,7 @@
 
     <div class="row">
         <div class="col-12 col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="pt-1"></div>
             <div class="card">
                 <h2 class="p-3 card-title">{{ $flex->name }}</h2>
                 <div class="pb-3 pl-3 pr-3">
@@ -58,6 +59,7 @@
             </div>
         </div>
         <div class="col-12 col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="pt-1"></div>
             <div class="card">
                 <div class="p-1">
                     <img src="{{ url($flex->demo_image) }}" class="card-img-top" alt="...">
