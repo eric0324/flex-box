@@ -20,7 +20,7 @@ class FlexController extends Controller
      */
     public function index()
     {
-        $flexes = Flex::paginate(16);
+        $flexes = Flex::orderBy('created_at', 'desc')->paginate(16);
         return view('flex.index', ['flexes' => $flexes]);
     }
 
