@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+@section('title')
+<title>建立 Flex message 範本 - FlexBox</title>
+@endsection
+@section('metadata')
+<meta name="description" content="FlexBox 收集了來自世界各地開發者的 LINE flex message">
+<meta property="og:title" content="建立 FlexBox 範本 - FlexBox">
+<meta property="og:description" content="FlexBox 收集了來自世界各地開發者的 LINE flex message">
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

@@ -1,5 +1,12 @@
 @extends('layouts.app')
-
+@section('title')
+<title>{{ $flex->name }} - FlexBox</title>
+@endsection
+@section('metadata')
+<meta name="description" content="{{ $flex->name }} 可以用來 {{ $flex->description }}">
+<meta property="og:title" content="{{ $flex->name }} - FlexBox">
+<meta property="og:description" content="{{ $flex->name }} 可以用來 {{ $flex->description }}">
+@endsection
 @section('content')
 <div class="container">
     <nav aria-label="breadcrumb">
@@ -33,9 +40,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#">Java</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">PHP</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#">Ruby</a>

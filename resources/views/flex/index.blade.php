@@ -1,5 +1,12 @@
 @extends('layouts.app')
-
+@section('title')
+<title>Flex message 清單 - FlexBox</title>
+@endsection
+@section('metadata')
+<meta name="description" content="FlexBox 收集了來自世界各地開發者的 LINE flex message">
+<meta property="og:title" content="Flex message 清單 - FlexBox">
+<meta property="og:description" content="FlexBox 收集了來自世界各地開發者的 LINE flex message">
+@endsection
 @section('content')
 <div class="container">
     @if (Session::has('success_message'))
