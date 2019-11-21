@@ -26,8 +26,13 @@
                     @if (empty($flex->verify_at))
                         <p>尚未認證的 Flex message ，所以還無法直接 demo 給你看</p>
                     @else
-                        如果你需要 demo，可以 <a href="https://line.me/R/ti/p/%40872ahwhe">加入好友</a>，並且輸入：
-                        <code>demo {{ $flex->demo_code }}</code>
+                        <div id="no-line">
+                            如果你需要 demo，可以 <a href="https://line.me/R/ti/p/%40872ahwhe">加入好友</a>，並且輸入：
+                            <code>demo {{ $flex->demo_code }}</code>
+                        </div>
+                        <div id="line">
+                            <button id="sendMessageButton">Send Message</button>
+                        </div>
                     @endif
                 </div>
                 <div class="p-3">
@@ -79,5 +84,17 @@
 </div>
 @endsection
 @section('javascript_file')
+<script src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script>
+    window.onload = function() {
+        document.getElementById('line').style.visibility = 'hidden';
+        document.getElementById('no-line').style.visibility = 'visible';
+        let myLiffId = "1653458381-72g3dOyb";
+        let messageContent = "demo {{ $flex->demo_code }}"
+        initializeLiff(myLiffId, messageContent);
+    };
+</script>
+<script src="{{ secure_asset('js/liff/starter_2.js') }}"></script>
 @endsection
