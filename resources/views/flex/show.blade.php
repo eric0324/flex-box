@@ -67,7 +67,7 @@
                 <div class="p-3">
                     @if (empty($flex->bot_id))
                     @else
-                        這個 Flex message 由 <a href="https://line.me/R/ti/p/%40{{ $flex->bot_id }}">&#64{{$flex->bot_id}}</a> 提供
+                        這個 Flex message 由 <a href="https://line.me/R/ti/p/%40{{ $flex->bot_id }}"> ＠{{$flex->bot_id}} </a> 提供
                     @endif
                 </div>
             </div>
