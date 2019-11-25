@@ -11,5 +11,5 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('admin.home');
-    $router->get('/flex', 'FlexController@index')->name('admin.flex');
+    $router->resource('/flex', FlexController::class);
 });
