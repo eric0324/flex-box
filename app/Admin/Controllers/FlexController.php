@@ -135,7 +135,7 @@ class FlexController extends Controller
         $form->text('demo_code', 'Chatbot 預覽碼');
         $form->text('bot_id', 'Chatbot ID');
         $form->text('shell', 'Shell');
-        $form->text('verify_at', '驗證時間');
+        $form->datetime('verify_at', '驗證時間');
 
         return $form;
     }
