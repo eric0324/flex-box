@@ -55,9 +55,9 @@
                         </li>
                     </ul>
                     <div class="p-3">
-                        <code class="prettyprint lang-json">
-                            {{ $flex->shell }}
-                        </code>
+                        <pre class="prettyprint lang-json">
+                            {{ json_encode(json_decode( $flex->shell ), JSON_PRETTY_PRINT) }}
+                        </pre>
                     </div>
                 </div>
             </div>
